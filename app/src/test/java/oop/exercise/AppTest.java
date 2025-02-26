@@ -10,5 +10,11 @@ class AppTest {
     @Test void getTicketPrice() {
         App classUnderTest = new App();
         assertEquals(0, classUnderTest.getTicketPrice(1, 2));
+        assertEquals(1200, classUnderTest.getTicketPrice(4, 8));
+        assertEquals(1500, classUnderTest.getTicketPrice(4, 12));
+        assertEquals(1200, classUnderTest.getTicketPrice(4, 20));
+        assertEquals(2000, classUnderTest.getTicketPrice(25, 8));
+        assertEquals(2500, classUnderTest.getTicketPrice(25, 12));
+        assertEquals(2000, classUnderTest.getTicketPrice(25, 20));
     }
 }
